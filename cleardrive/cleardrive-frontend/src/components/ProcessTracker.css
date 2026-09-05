@@ -1,0 +1,74 @@
+.tracker {
+  display: flex;
+  flex-direction: column;
+}
+
+.tracker-step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 28px;
+}
+
+.tracker-step:last-child {
+  padding-bottom: 0;
+}
+
+.tracker-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+  z-index: 1;
+  background: var(--sand);
+  color: var(--ink-soft);
+  border: 2px solid var(--line);
+}
+
+.tracker-step.done .tracker-dot {
+  background: var(--forest);
+  color: white;
+  border-color: var(--forest);
+}
+
+.tracker-step.current .tracker-dot {
+  background: var(--amber);
+  color: var(--ink);
+  border-color: var(--amber);
+}
+
+.tracker-title {
+  font-size: 15px;
+  color: var(--ink);
+  font-weight: 500;
+  padding-top: 4px;
+}
+
+.tracker-status {
+  font-size: 12.5px;
+  color: var(--amber-dark);
+  margin-top: 2px;
+}
+
+.tracker-status.done-text {
+  color: var(--forest);
+}
+
+.tracker-line {
+  position: absolute;
+  left: 14px;
+  top: 30px;
+  width: 2px;
+  height: calc(100% - 30px);
+  background: var(--line);
+}
+
+.tracker-line.done {
+  background: var(--forest);
+}

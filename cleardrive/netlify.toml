@@ -1,0 +1,11 @@
+[build]
+  base = "cleardrive-frontend"
+  command = "npm run build"
+  publish = "dist"
+
+# Needed so React Router's client-side routes (e.g. /car/3/price) don't
+# 404 on Netlify when someone refreshes or links directly to them.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

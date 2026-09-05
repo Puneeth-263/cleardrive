@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --ink: #1b2430;
+  --ink-soft: #5d6b7a;
+  --paper: #ffffff;
+  --sand: #f2ede4;
+  --line: #e4ded3;
+  --amber: #e2a33b;
+  --amber-dark: #b9791f;
+  --forest: #3a6b52;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--sand);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  padding: 13px 26px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.field label {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.field input,
+.field select {
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid var(--amber);
+  outline-offset: 1px;
+}
+
+.grid-cars {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.error-box {
+  background: #fbeaea;
+  color: #99342a;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.loading {
+  color: var(--ink-soft);
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* Compare table */
+.compare-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 560px;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid var(--line);
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.compare-table th {
+  background: var(--paper);
+  font-family: var(--font-display);
+  font-size: 16px;
+  min-width: 180px;
+}
+
+.compare-table-label {
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: var(--sand);
+  white-space: nowrap;
+}
+
+/* Star rating input */
+.star-input {
+  display: flex;
+  gap: 4px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.star-input span {
+  color: var(--line);
+}
+
+.star-input span.filled {
+  color: var(--amber);
+}
+
+/* Reviews */
+.review-item {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+
+.review-item:last-child {
+  border-bottom: none;
+}
+
+.review-item-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin-bottom: 4px;
+}
+
+/* EMI calculator */
+.emi-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.emi-table th,
+.emi-table td {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  font-size: 13.5px;
+  text-align: left;
+}
+
+.emi-table th {
+  background: var(--sand);
+}
+
+/* Badges / notices */
+.notice-box {
+  background: var(--sand);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin: 12px 0;
+}
