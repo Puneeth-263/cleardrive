@@ -1,7 +1,10 @@
 [build]
   base = "cleardrive/cleardrive-frontend"
-  command = "npm run build"
+  command = "npm install --include=dev && npm run build"
   publish = "dist"
+
+[build.environment]
+  NPM_FLAGS = "--include=dev"
 
 # Needed so React Router's client-side routes (e.g. /car/3/price) don't
 # 404 on Netlify when someone refreshes or links directly to them.
