@@ -51,6 +51,19 @@ exports.getRecommendations = async (req, res) => {
   }
 };
 
+exports.searchCars = async (req, res) => {
+  const q = req.query.q;
+  if (!q || !q.trim()) {
+    return res.status(400).json({ error: 'Provide a search term with ?q=' });
+  }
+  try {
+    const results = await Car.search(q);
+    res.json({ count: results.length, cars: results });
+  } catch (err) {
+    res.status(500).json({ error: 'Search failed' });
+  }
+};
+
 exports.compareCars = async (req, res) => {
   const { ids } = req.body;
   if (!Array.isArray(ids) || ids.length < 2 || ids.length > 3) {

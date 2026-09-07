@@ -1,7 +1,19 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from '../components/SearchBar';
+import CarCard from '../components/CarCard';
+import { getAllCars } from '../services/carService';
 import './Home.css';
 
 export default function Home() {
+  const [popularCars, setPopularCars] = useState([]);
+
+  useEffect(() => {
+    getAllCars()
+      .then((cars) => setPopularCars(cars.filter((c) => !c.isUsed).slice(0, 4)))
+      .catch(() => {});
+  }, []);
+
   return (
     <div>
       <section className="hero">
@@ -16,11 +28,25 @@ export default function Home() {
             show every cost with nothing hidden, and guide you through
             booking to delivery — step by step, in real time.
           </p>
-          <Link to="/requirements" className="btn-primary hero-cta">
-            Find my car
-          </Link>
+          <div className="hero-actions">
+            <SearchBar />
+            <Link to="/requirements" className="btn-primary hero-cta">
+              Or find my car by budget
+            </Link>
+          </div>
         </div>
       </section>
+
+      {popularCars.length > 0 && (
+        <section className="popular-cars">
+          <h2>Popular right now</h2>
+          <div className="grid-cars">
+            {popularCars.map((car) => (
+              <CarCard key={car.id} car={car} />
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="how-it-works">
         <h2>How ClearDrive works</h2>

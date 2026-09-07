@@ -15,6 +15,10 @@ export function getRecommendations(requirements) {
   });
 }
 
+export function searchCars(q) {
+  return request(`/cars/search?q=${encodeURIComponent(q)}`);
+}
+
 export function compareCars(ids) {
   return request('/cars/compare', {
     method: 'POST',

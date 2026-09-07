@@ -2,12 +2,15 @@
   { "carId": 1, "cashDiscount": 5000, "exchangeBonus": 10000, "corporateDiscount": 3000, "validTill": "2026-09-30", "note": "Standard month-end offer" },
   { "carId": 2, "cashDiscount": 5000, "exchangeBonus": 10000, "corporateDiscount": 3000, "validTill": "2026-09-30", "note": "Standard month-end offer" },
   { "carId": 3, "cashDiscount": 20000, "exchangeBonus": 30000, "corporateDiscount": 35000, "validTill": "2026-09-30", "note": "Benefits up to Rs. 85,000 across offers" },
-  { "carId": 4, "cashDiscount": 15000, "exchangeBonus": 25000, "corporateDiscount": 30000, "validTill": "2026-09-30", "note": "Benefits up to Rs. 85,000 across offers" },
+  { "carId": 4, "cashDiscount": 15000, "exchangeBonus": 25000, "corporateDiscount": 30000, "validTill": "2026-09-30", "note": "Benefits up to Rs. 70,000 across offers" },
   { "carId": 5, "cashDiscount": 10000, "exchangeBonus": 15000, "corporateDiscount": 5000, "validTill": "2026-09-30", "note": "Festive season offer" },
   { "carId": 6, "cashDiscount": 10000, "exchangeBonus": 15000, "corporateDiscount": 5000, "validTill": "2026-09-30", "note": "Festive season offer" },
   { "carId": 7, "cashDiscount": 25000, "exchangeBonus": 0, "corporateDiscount": 10000, "validTill": "2026-09-30", "note": "EV promotion offer" },
   { "carId": 8, "cashDiscount": 30000, "exchangeBonus": 25000, "corporateDiscount": 40000, "validTill": "2026-09-30", "note": "Benefits up to Rs. 95,000 across offers" },
-  { "carId": 9, "cashDiscount": 25000, "exchangeBonus": 25000, "corporateDiscount": 40000, "validTill": "2026-09-30", "note": "Benefits up to Rs. 95,000 across offers" },
+  { "carId": 9, "cashDiscount": 25000, "exchangeBonus": 25000, "corporateDiscount": 40000, "validTill": "2026-09-30", "note": "Benefits up to Rs. 90,000 across offers" },
   { "carId": 10, "cashDiscount": 8000, "exchangeBonus": 12000, "corporateDiscount": 5000, "validTill": "2026-09-30", "note": "Standard offer" },
-  { "carId": 11, "cashDiscount": 15000, "exchangeBonus": 20000, "corporateDiscount": 10000, "validTill": "2026-09-30", "note": "Standard offer" }
+  { "carId": 11, "cashDiscount": 15000, "exchangeBonus": 20000, "corporateDiscount": 10000, "validTill": "2026-09-30", "note": "Standard offer" },
+  { "carId": 15, "cashDiscount": 5000, "exchangeBonus": 10000, "corporateDiscount": 3000, "validTill": "2026-09-30", "note": "Standard month-end offer" },
+  { "carId": 16, "cashDiscount": 5000, "exchangeBonus": 10000, "corporateDiscount": 3000, "validTill": "2026-09-30", "note": "Standard month-end offer" },
+  { "carId": 17, "cashDiscount": 20000, "exchangeBonus": 30000, "corporateDiscount": 35000, "validTill": "2026-09-30", "note": "Benefits up to Rs. 85,000 across offers" }
 ]

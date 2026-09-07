@@ -26,11 +26,31 @@
   margin-bottom: 32px;
 }
 
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
 .hero-cta {
-  background: var(--amber);
-  color: var(--ink);
-  text-decoration: none;
+  background: none;
+  color: var(--paper);
+  text-decoration: underline;
   display: inline-block;
+  font-size: 14.5px;
+  padding: 0;
+}
+
+.popular-cars {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 24px 20px;
+}
+
+.popular-cars h2 {
+  font-size: 26px;
+  margin-bottom: 28px;
 }
 
 .how-it-works {

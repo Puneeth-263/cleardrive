@@ -56,7 +56,23 @@ class Car {
 
     return results
       .sort((a, b) => Math.abs(a.exShowroomPrice - maxBudget) - Math.abs(b.exShowroomPrice - maxBudget))
-      .slice(0, 8);
+      .slice(0, 20);
+  }
+
+  static async search(query) {
+    const q = query.toLowerCase().trim();
+    if (isDbConnected()) {
+      return CarSchema.find({
+        $or: [
+          { brand: { $regex: q, $options: 'i' } },
+          { model: { $regex: q, $options: 'i' } },
+          { variant: { $regex: q, $options: 'i' } },
+        ],
+      }).lean();
+    }
+    return cars.filter((c) =>
+      `${c.brand} ${c.model} ${c.variant}`.toLowerCase().includes(q)
+    );
   }
 
   static async getByIds(ids) {

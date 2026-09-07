@@ -12,6 +12,7 @@ import MyBookings from './pages/MyBookings';
 import UsedCars from './pages/UsedCars';
 import CompareCars from './pages/CompareCars';
 import AdminDashboard from './pages/AdminDashboard';
+import SearchResults from './pages/SearchResults';
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/used-cars" element={<UsedCars />} />
         <Route path="/compare" element={<CompareCars />} />
         <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/search" element={<SearchResults />} />
       </Routes>
     </BrowserRouter>
   );
