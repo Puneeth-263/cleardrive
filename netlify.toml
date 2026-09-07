@@ -1,5 +1,5 @@
 [build]
-  base = "cleardrive/cleardrive-frontend"
+  base = "cleardrive-frontend" 
   command = "npm install --include=dev && npm run build"
   publish = "dist"
 
